@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  width: 8px;
+}
+body::-webkit-scrollbar-thumb {
+  background: black;
+  border-radius: 50px;
+}
+.login_card {
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.5)
+  );
+  box-shadow: 0 5px 10px 10px rgba(0, 0, 0, 0.3);
+}
+li {
+  position: relative;
+}
+
+.nav li::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background-color: black;
+  border-radius: 50px;
+  transition: all 0.3s linear;
+}
+.nav li:hover::after {
+  width: 100%;
+}
+.nav li.active::after {
+  width: 100%;
+}
+
+.blog h1 {
+  font-size: 2.7rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+.cover {
+  padding: 2rem;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9));
+  box-shadow: 0 5px 10px 10px rgba(0, 0, 0, 0.3);
+}
+
+.parallax {
+  /* The image used */
+
+  /* Set a specific height */
+  min-height: 500px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
